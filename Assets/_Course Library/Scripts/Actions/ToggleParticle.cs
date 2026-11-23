@@ -9,6 +9,12 @@ public class ToggleParticle : MonoBehaviour
     private ParticleSystem currentParticleSystem = null;
     private MonoBehaviour currentOwner = null;
 
+    public ParticleSystem waterParticles;
+    public float cooldown = 0.5f;
+
+    private bool isFlowing = false;
+    private float lastToggleTime = -1f;
+
     private void Awake()
     {
         currentParticleSystem = GetComponent<ParticleSystem>();
@@ -49,5 +55,19 @@ public class ToggleParticle : MonoBehaviour
             ParticleSystem.MainModule main = currentParticleSystem.main;
             main.playOnAwake = false;
         }
+    }
+
+    public void Toggle()
+    {
+        if (Time.time - lastToggleTime < cooldown)
+            return;
+
+        lastToggleTime = Time.time;
+        isFlowing = !isFlowing;
+
+        if (isFlowing)
+            waterParticles.Play();
+        else
+            waterParticles.Stop();
     }
 }

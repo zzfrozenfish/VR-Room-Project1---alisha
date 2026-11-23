@@ -11,6 +11,9 @@ public class RotateObject : MonoBehaviour
     [Tooltip("The max speed of the rotation")]
     public float speed = 10.0f;
 
+    [Tooltip("Assign the light object here")]
+    public GameObject light;
+
     private bool isRotating = false;
 
     public void SetIsRotating(bool value)
@@ -28,16 +31,19 @@ public class RotateObject : MonoBehaviour
     public void Begin()
     {
         isRotating = true;
+        UpdateLight();
     }
 
     public void End()
     {
         isRotating = false;
+        UpdateLight();
     }
 
     public void ToggleRotate()
     {
         isRotating = !isRotating;
+        UpdateLight();
     }
 
 
@@ -56,5 +62,13 @@ public class RotateObject : MonoBehaviour
     private void Rotate()
     {
         transform.Rotate(transform.up, (sensitivity * speed) * Time.deltaTime);
+    }
+
+    void UpdateLight()
+    {
+        if (light != null)
+        {
+            light.SetActive(isRotating);
+        }
     }
 }

@@ -2128,6 +2128,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 116851093}
     m_Modifications:
+    - target: {fileID: 220270219724318380, guid: 5c9438e12d91dfe4eb8c39dead753db2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 783456170190508593, guid: 5c9438e12d91dfe4eb8c39dead753db2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1546119879753576631, guid: 5c9438e12d91dfe4eb8c39dead753db2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2433397398299559102, guid: 5c9438e12d91dfe4eb8c39dead753db2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5885611591023471311, guid: 5c9438e12d91dfe4eb8c39dead753db2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2032232
@@ -2171,6 +2187,10 @@ PrefabInstance:
     - target: {fileID: 6549980035440210037, guid: 5c9438e12d91dfe4eb8c39dead753db2, type: 3}
       propertyPath: m_Name
       value: Speaker_RecordPlayer_Brown
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522413976968195954, guid: 5c9438e12d91dfe4eb8c39dead753db2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8030394320873079205, guid: 5c9438e12d91dfe4eb8c39dead753db2, type: 3}
       propertyPath: m_LocalRotation.w
