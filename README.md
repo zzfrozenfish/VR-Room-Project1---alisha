@@ -1,4 +1,6 @@
-There are two scenes in this project:
+There are two primary scenes in this project:
+
+Asset -> Scenes
 
 1. VR Room - Tutorial
 
