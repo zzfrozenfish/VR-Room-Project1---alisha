@@ -12,6 +12,8 @@ TagManager:
   - Flame
   - Trail
   - LighterFlame
+  - Knife
+  - Mouth
   layers:
   - Default
   - TransparentFX

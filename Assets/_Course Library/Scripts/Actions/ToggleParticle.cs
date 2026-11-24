@@ -10,6 +10,7 @@ public class ToggleParticle : MonoBehaviour
     private MonoBehaviour currentOwner = null;
 
     public ParticleSystem waterParticles;
+    public AudioSource waterAudio;
     public float cooldown = 0.5f;
 
     private bool isFlowing = false;
@@ -66,8 +67,14 @@ public class ToggleParticle : MonoBehaviour
         isFlowing = !isFlowing;
 
         if (isFlowing)
+        {
             waterParticles.Play();
+            if (waterAudio != null) waterAudio.Play();
+        }
         else
+        {
             waterParticles.Stop();
+            if (waterAudio != null) waterAudio.Stop();
+        }
     }
 }

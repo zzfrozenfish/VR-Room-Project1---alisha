@@ -3,6 +3,7 @@ using UnityEngine;
 public class StoveBurner : MonoBehaviour
 {
     public ParticleSystem burnerFlames;
+    public AudioSource flameAudio;
     public bool isLit { get; private set; } = false;
 
     private ParticleSystem nearbyLighterFlame;
@@ -27,15 +28,15 @@ public class StoveBurner : MonoBehaviour
     {
         if (isLit)
         {
-            // Turn off the stove
             isLit = false;
             burnerFlames.Stop();
+            if (flameAudio != null) flameAudio.Stop();
         }
         else if (nearbyLighterFlame != null && nearbyLighterFlame.isPlaying)
         {
-            // Only ignite if the lighter is close AND currently lit
             isLit = true;
             burnerFlames.Play();
+            if (flameAudio != null) flameAudio.Play();
         }
     }
 }
