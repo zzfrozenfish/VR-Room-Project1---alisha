@@ -1,3 +1,4 @@
+# Interactive VR Kitchen — VR Application Development 3
 There are two primary scenes in this project:
 
 Asset -> Scenes
